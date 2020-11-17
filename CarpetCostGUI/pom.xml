@@ -15,4 +15,11 @@
       <version>${project.version}</version>
     </dependency>
   </dependencies>
+    <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub Ichijikuibo Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/Ichijikuibo/STMavenDemo</url>
+   </repository>
+</distributionManagement>
 </project>
