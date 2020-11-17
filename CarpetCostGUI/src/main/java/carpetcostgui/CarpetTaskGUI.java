@@ -1,4 +1,4 @@
-package mavendemo;
+package carpetcostgui;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -16,6 +16,9 @@ import javax.swing.ButtonGroup;
 import javax.swing.border.TitledBorder;
 import javax.swing.SwingConstants;
 import javax.swing.event.ChangeListener;
+
+import carpetcost.CostCalculator;
+
 import javax.swing.event.ChangeEvent;
 import java.awt.Font;
 
