@@ -23,6 +23,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn install -s $GITHUB_WORKSPACE/pom.xml
+      run: |
+        mkdir ~/.m2
+        echo "<settings><servers><server><id>github</id><username>Ichijikuibo</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
+        mvn deploy
       env:
         GITHUB_TOKEN: ${{ github.token }}
