@@ -31,7 +31,7 @@ public class CarpetCostConsole {
 		
 		cost = carpet.getCost(pricePerMetreSquared, metresSquared, existingCustomer, deliveryZone=='a'?0:1);//get the cost of the carpet
 		
-		System.out.printf("\nTotal cost of carpet is £%.2f", cost);//print out the cost of the carpet to the user
+		System.out.printf("\nTotal cost of carpet is Â£%.2f", cost);//print out the cost of the carpet to the user
 	}
 	/**
 	 * Get a real number from console input between 2 values
