@@ -19,7 +19,7 @@ import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
 import java.awt.Font;
 
-public class CarpetTask extends JFrame {
+public class CarpetTaskGUI extends JFrame {
 
 	/**
 	 * 
@@ -46,7 +46,7 @@ public class CarpetTask extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CarpetTask frame = new CarpetTask();
+					CarpetTaskGUI frame = new CarpetTaskGUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +58,7 @@ public class CarpetTask extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CarpetTask() {
+	public CarpetTaskGUI() {
 		setTitle("We Got You Covered");
 
 		carpetCostCalculator = new CostCalculator();
@@ -167,21 +167,18 @@ public class CarpetTask extends JFrame {
 		double carpetCost = (double)getCostSpinner().getValue();
 		double carpetAmount = (double)getAmountSpinner().getValue();
 		double CarpetCost = carpetCost*carpetAmount;
-		getCarpetCostLabel().setText(String.format("Carpet Cost: £%.2f",CarpetCost));
+		getCarpetCostLabel().setText(String.format("Carpet Cost: Â£%.2f",CarpetCost));
 		boolean existingCustomer = getExistingCustomerCheck().isSelected();
 		int deliveryZone = 0;		
 		if(getZoneAButton().isSelected())
-		{
 			deliveryZone = 0;
-		}
-		else 
-		{
+		else
 			deliveryZone = 1;
-		}
+		
 
 		double totalCost = carpetCostCalculator.getCost(carpetCost, carpetAmount, existingCustomer, deliveryZone);
 
-		getCostLabel().setText(String.format("Final Cost: £%.2f",totalCost));
+		getCostLabel().setText(String.format("Final Cost: Â£%.2f",totalCost));
 	}
 
 	public JSpinner getCostSpinner() {
