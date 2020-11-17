@@ -1,6 +1,13 @@
-package mavendemo;
+package carpetcostconsole;
 
 import java.util.Scanner;
+
+import carpetcost.CostCalculator;
+
+
+
+
+
 
 public class CarpetCostConsole {
 	private static Scanner input = new Scanner(System.in);

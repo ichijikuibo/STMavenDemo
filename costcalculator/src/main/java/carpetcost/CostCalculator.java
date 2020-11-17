@@ -1,4 +1,4 @@
-package mavendemo;
+package carpetcost;
 
 import java.util.ArrayList;
 import java.util.List;

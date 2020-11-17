@@ -1,4 +1,4 @@
-package mavendemo;
+package carpetcost;
 
 import static org.junit.Assert.*;
 
@@ -14,7 +14,7 @@ import org.junit.Test;
 
 import junit.framework.Assert.*;
 
-public class CostTests {
+public class CostTest {
 
 	static CostCalculator carpet;
 	@BeforeClass
@@ -34,7 +34,7 @@ public class CostTests {
 
 	@Test
 	public void test() {
-		List<String> tests = CostTests.openCSV("C:\\Users\\30004001\\OneDrive - North West Regional College\\Foundation Degree\\Software Testing\\CarpetCostTestData.csv");
+		List<String> tests = CostTest.openCSV("C:\\Users\\30004001\\OneDrive - North West Regional College\\Foundation Degree\\Software Testing\\CarpetCostTestData.csv");
 		for(String s :tests)
 		{
 			
@@ -44,7 +44,7 @@ public class CostTests {
 				int deliveryZone = split[2].toUpperCase().equals("A")?0:1;
 				boolean existingCustomer =  split[3].toUpperCase().equals("TRUE")?true:false;
 				double expectedResult = Double.parseDouble(split[4]);
-				double result = CostTests.carpet.getCost(Double.parseDouble(split[0]), Double.parseDouble(split[1]),existingCustomer,deliveryZone);
+				double result = CostTest.carpet.getCost(Double.parseDouble(split[0]), Double.parseDouble(split[1]),existingCustomer,deliveryZone);
 				assertEquals(expectedResult, result,0);
 			}
 		}
