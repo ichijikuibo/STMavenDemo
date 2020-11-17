@@ -34,7 +34,7 @@ public class CostTest {
 
 	@Test
 	public void test() {
-		List<String> tests = CostTest.openCSV("C:\\Users\\30004001\\OneDrive - North West Regional College\\Foundation Degree\\Software Testing\\CarpetCostTestData.csv");
+		List<String> tests = CostTest.openCSV("testdata/CarpetCostTestData.csv");
 		for(String s :tests)
 		{
 			
