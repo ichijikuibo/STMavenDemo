@@ -23,6 +23,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy --file $GITHUB_WORKSPACE/CarpetCostGUI/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn deploy --file $GITHUB_WORKSPACE/costcalculator/pom.xml -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
