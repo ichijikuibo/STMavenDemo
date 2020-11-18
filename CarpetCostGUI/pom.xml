@@ -38,7 +38,7 @@
 	                <archive>
 	                <manifest>
 	                    <mainClass>
-	                        carpetcostgui.GUI
+	                        carpetcostgui.CarpetCostGUI
 	                    </mainClass>
 	                </manifest>
 	                </archive>
