@@ -37,7 +37,7 @@
 	                <archive>
 	                <manifest>
 	                    <mainClass>
-	                        com.cc.carpetcostconsole.CarpetCostConsole
+	                        carpetcostconsole.CarpetCostConsole
 	                    </mainClass>
 	                </manifest>
 	                </archive>
