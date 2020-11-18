@@ -15,7 +15,8 @@
         <version>4.13.1</version>
         <scope>test</scope>
     </dependency>
-  </dependencies> 	  
+  </dependencies> 	
+    
 
       <distributionManagement>
    <repository>
@@ -24,5 +25,21 @@
      <url>https://maven.pkg.github.com/Ichijikuibo/STMavenDemo</url>
    </repository>
 </distributionManagement>
+  
+  <build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+ </build>
+  
+  
   
 </project>
