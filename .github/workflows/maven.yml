@@ -22,6 +22,8 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Install with maven
+      run: mvn install
     - name: Publish to GitHub Packages Apache Maven Cost Calculator
       run: mvn deploy --file costcalculator/pom.xml -s $GITHUB_WORKSPACE/settings.xml
       env:
