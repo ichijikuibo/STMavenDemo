@@ -4,8 +4,6 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -22,10 +20,4 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-
-
-    - name: Publish to GitHub Packages Apache Maven Console
-      run: mvn deploy -X -s $GITHUB_WORKSPACE/settings.xml
-      env: 
-        GITHUB_TOKEN: ${{ github.token }}
 
